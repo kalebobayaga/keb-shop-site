@@ -1,21 +1,19 @@
 {
   "name": "keb-shop-site",
   "version": "1.0.0",
+  "description": "Official website for KEB International Engineers Limited",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "keywords": [],
+  "author": "kalebobayag@gmail.com",
+  "license": "MIT",
   "dependencies": {
-<<<<<<< HEAD
-    "next": "^13.4.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-=======
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "lucide-react": "^0.280.0"
->>>>>>> 3b86b0f0e5f59fac777cd79b3928ea4656eea8fa
+    "next": "13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
