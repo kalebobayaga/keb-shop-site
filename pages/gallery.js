@@ -8,5 +8,5 @@ export default function Gallery() {
         <img src="/images/project1.jpg" alt="Field instrumentation setup" />
       </div>
     </div>
-  )
+  );
 }
