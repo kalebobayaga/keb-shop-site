@@ -1,29 +1,28 @@
 // components/SearchBar.js
+'use client';
+
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function SearchBar() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [query, setQuery] = useState('');
+  const router = useRouter();
 
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleSearchSubmit = (e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
-    if (searchQuery) {
-      // Redirect or handle search logic here
-      console.log('Searching for:', searchQuery);
+    if (query.trim()) {
+      router.push(`/products?search=${encodeURIComponent(query.trim())}`);
     }
   };
 
   return (
-    <form onSubmit={handleSearchSubmit} className="search-bar">
+    <form onSubmit={handleSearch} className="search-bar">
       <input
         type="text"
-        placeholder="Search products..."
-        value={searchQuery}
-        onChange={handleSearchChange}
         className="search-input"
+        placeholder="Search products..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <button type="submit" className="search-button">Search</button>
     </form>
