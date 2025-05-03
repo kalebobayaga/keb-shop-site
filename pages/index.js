@@ -78,4 +78,5 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+}<img src="/images/shop-banner.jpg" alt="KEB Shop Banner" className="hero-image" />
+
